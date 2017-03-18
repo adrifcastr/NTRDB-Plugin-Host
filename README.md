@@ -1,2 +1,1 @@
-# NTRDB-Plugin-Host
-NTRDB Plugin Host
+# NTRDBI Nightly Repo
