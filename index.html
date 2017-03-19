@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>NTRDBI</title>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="js/jssor.slider-22.2.16.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="js/jquery.scrollify.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <script>
+        $(function() {
+            $.scrollify({
+                section : ".section",
+            });
+        });
+    </script>
+    <script type="text/javascript" src="js/qrcode.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+    <style type="text/css">
+        .section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-shadow: none;
+        }
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .container {
+            text-align: center
+        }
+        .modal-body {
+            text-align: center;
+            justify-content: center;
+        }
+        h1 {
+            font-family: 'Comfortaa', cursive;
+            font-size: 6rem;
+            font-weight: 300;
+            line-height: 1.1;
+        }
+        .site {
+            box-shadow: inset 0 0 5rem rgba(0,0,0,.5);
+        }
+        hr {
+            color: black;
+            background-color: black
+        }
+    </style>
+</head>
+<body style="margin: 0;padding: 0; font-family: sans-serif;text-shadow: 0 .05rem .1rem rgba(0,0,0,.5);">
+    <div class="modal fade" id="qrmodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">QR Code</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <center>
+                        <div id="qrcode"></div>
+                    </center>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary btn-block" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="site">
+        <div class="section" style="background-color: #ECECEC">
+            <div class="container">
+                <h1>NTRDBI</h1>
+                <h2>NTRDB Downloader by Jolty95</h2>
+                <br style="height: 10%">
+                <a href="#" class="btn btn-primary btn-block" onclick="$.scrollify.next()">Download</a>
+            </div>
+        </div>
+        <div class="section" style="background-color: #81CFE0">
+            <div class="container">
+                <h1>Downloads</h1>
+                <h2>Stable(not like 3DS firmware)</h2>
+                <a class="btn btn-secondary" href="https://github.com/adrifcastr/NTRDB-Plugin-Host/raw/NTRDBI-Update-Server/NTRDBI.cia"><i class="fa fa-2x fa-download" aria-hidden="true"></i>CIA</a>
+                <a class="btn btn-secondary" href="#" data-toggle="modal" data-target="#qrmodal" onclick="new QRCode(document.getElementById('qrcode'), 'https://github.com/adrifcastr/NTRDB-Plugin-Host/raw/NTRDBI-Update-Server/NTRDBI.cia');"><i class="fa fa-2x fa-qrcode" aria-hidden="true"></i></a>
+                <hr>
+                <h2>Nightly</h2>
+                <a class="btn btn-secondary" href="https://github.com/adrifcastr/NTRDB-Plugin-Host/raw/NTRDBI-Nightlies-Server/latest.cia"><i class="fa fa-2x fa-download" aria-hidden="true"></i>CIA</a>
+                <a class="btn btn-secondary" href="#" data-toggle="modal" data-target="#qrmodal" onclick="new QRCode(document.getElementById('qrcode'), 'https://github.com/adrifcastr/NTRDB-Plugin-Host/raw/NTRDBI-Nightlies-Server/latest.cia');"><i class="fa fa-2x fa-qrcode" aria-hidden="true"></i></a>
+                <a class="btn btn-secondary" href="https://github.com/adrifcastr/NTRDB-Plugin-Host/raw/NTRDBI-Nightlies-Server/NTRDBI.zip"><i class="fa fa-2x fa-file-archive-o" aria-hidden="true"></i>ZIP</a>
+            </div>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+            $('#makeMeScrollable').coverscroll();
+        </script>
+    </body>
+    </html>
